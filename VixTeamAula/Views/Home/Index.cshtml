@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="row">
+  
+    <div class="col-md-6">
+          <h2>Fundo Claro</h2>
+        <div class="jumbotron bg-cover" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0.9) 100%), url(https://placeimg.com/1000/480/nature)">
+              <div class="container">
+                  <h1 class="display-4">Olá, Mundo!</h1>
+                  <p class="lead">Exemplo simples de jumbotron para a Academia Treinee VixTeam.</p>
+                  <hr class="my-4">
+                  <p>Testando o jumbotron.</p>
+                  <a class="btn btn-primary btn-lg" href="" onclick=alerta() role="button">Botão jumbotron</a>
+                </div>
+    <!-- /.container   -->
+        </div>
+    </div>
+
+    <div class="col-md-6">
+          <h2>Fundo Escuro</h2>
+        <div class="jumbotron bg-cover text-white" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.6) 0%,rgba(0,0,0,0.6) 100%), url(https://placeimg.com/1000/480/nature)">
+              <div class="container">
+                  <h1 class="display-4">Olá, Mundo!</h1>
+                  <p class="lead">Exemplo simples de jumbotron para a Academia Treinee VixTeam.</p>
+                  <hr class="my-4">
+                  <p>Testando o jumbotron.</p>
+                  <a class="btn btn-primary btn-lg" onclick=redirectPrivacy() role="button">Ir para Privacy</a>
+              </div>
+        <!-- /.container   -->
+        </div>
+  
+    </div>
+
+</div>
+
+<script>
+    function alerta(){
+        alert("Exibe uma janela de alerta para o usuário com este texto!")
+        console.log("Exibe este texto no console (F12) do navegador!");
+    }
+     function redirectPrivacy(){
+        window.location.href="Home/Privacy";
+    }
+
+</script>
