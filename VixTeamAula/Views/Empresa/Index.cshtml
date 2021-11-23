@@ -2,42 +2,41 @@
     ViewData["Title"] = "Cadastar Empresa";
 
 }
+@model EmpresaModel;
 
 <div class="row">
       <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Nome da Empresa</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Nome" value="@Model.NomeEmpresa">
            <!-- <small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>-->
           </div>
 
           <div class="form-group">
             <label for="exampleInputPassword1">Nome Fantasia</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Nome Fantasia">
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Nome Fantasia" value="@Model.NomeFantasia">
           </div>
 
            <div class="form-group">
             <label for="exampleInputEmail1">CNPJ</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CNPJ">
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="CNPJ" value="@Model.CNPJ">
             <!--<small id="emailHelp" class="form-text text-muted">Nunca vamos compartilhar seu email, com ninguém.</small>-->
           </div>
-
-          <div class="form-group">
-            <label for="exampleInputPassword1">CNPJ</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="CNPJ">
-          </div>
+           
         
           <div class="form-group form-check">
             <input type="checkbox" class="form-check-input" id="exampleCheck1">
             <label class="form-check-label" for="exampleCheck1">Todos os dados são verdadeiros</label>
           </div>
-          <button type="submit" class="btn btn-primary">Confirmar</button>
+          <button type="submit" href="#" onclick=redirectHome() class="btn btn-primary">Confirmar</button>
     </form>
 
 </div>
 
 <script>
  
-     
+      function redirectHome(){
+        window.location.href="../Home/index";
+    }
 
 </script>
