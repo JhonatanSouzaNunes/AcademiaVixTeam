@@ -21,17 +21,6 @@ namespace VixTeamAula.Controllers
         {
             return View();
         }
-        public ActionResult Create(IFormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
 
 
         [HttpPost]
@@ -40,7 +29,7 @@ namespace VixTeamAula.Controllers
         {
             try
             {
-                return View("Index");
+                return View("~/Views/Home/Index.cshtml");
             }
             catch
             {
